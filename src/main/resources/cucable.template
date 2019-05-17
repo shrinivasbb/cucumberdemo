@@ -1,0 +1,31 @@
+import cucumber.api.CucumberOptions;
+import org.junit.runner.RunWith;
+import cucumber.api.junit.Cucumber;
+import com.github.mkolisnyk.cucumber.runner.ExtendedCucumber;
+import com.github.mkolisnyk.cucumber.runner.ExtendedCucumberOptions;
+
+@RunWith(Cucumber.class)
+
+@ExtendedCucumberOptions(
+        jsonReport = "cucumber-report/cucumber.json",
+        jsonUsageReport = "target/cucumber-usage.json",
+        usageReport = true,
+        detailedReport = true,
+        detailedAggregatedReport = true,
+        overviewReport = true,
+        overviewChartsReport = true,
+        pdfPageSize = "A4 Landscape",
+        toPDF = true,
+        outputFolder = "target/retried",
+        retryCount = 3)
+
+@CucumberOptions(
+        features = {"target/parallel/features/[CUCABLE:FEATURE].feature"},
+        plugin = {"json:target/cucumber-report/[CUCABLE:RUNNER].json",
+                  "rerun:rerun/failed_scenarios.txt"},
+        glue={"com.cukes.cucumberdemo"}
+)
+public class  [CUCABLE:RUNNER] {
+
+}
+
