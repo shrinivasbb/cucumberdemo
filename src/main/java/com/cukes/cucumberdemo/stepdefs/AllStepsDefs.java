@@ -20,8 +20,10 @@ public class AllStepsDefs {
     public WebDriver driver;
 
     public void init(){
-        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"
-                +File.separator+"resources"+ File.separator+"drivers"+ File.separator+"chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"
+          //      +File.separator+"resources"+ File.separator+"drivers"+ File.separator+"chromedriver.exe");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--start-maximized");
         driver=new ChromeDriver();
         driver.get("http://newtours.demoaut.com");
     }
