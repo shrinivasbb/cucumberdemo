@@ -62,7 +62,7 @@
         <dependency>
             <groupId>com.trivago.rta</groupId>
             <artifactId>cucable-plugin</artifactId>
-            <version>1.5.1</version>
+            <version>1.7.0</version>
         </dependency>
         <dependency>
             <groupId>com.github.mkolisnyk</groupId>
@@ -137,7 +137,7 @@
             <plugin>
                 <groupId>com.trivago.rta</groupId>
                 <artifactId>cucable-plugin</artifactId>
-                <version>1.5.1</version>
+                <version>1.7.0</version>
                 <executions>
                     <execution>
                         <id>generate-test-resources</id>
