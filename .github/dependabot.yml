@@ -1,0 +1,32 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: io.cucumber:cucumber-java
+    versions:
+    - 6.10.0
+    - 6.10.1
+    - 6.10.2
+    - 6.9.1
+  - dependency-name: io.cucumber:cucumber-core
+    versions:
+    - 6.10.0
+    - 6.10.1
+    - 6.10.2
+    - 6.9.1
+  - dependency-name: io.cucumber:cucumber-junit
+    versions:
+    - 6.10.0
+    - 6.10.1
+    - 6.10.2
+    - 6.9.1
+  - dependency-name: io.cucumber:cucumber-picocontainer
+    versions:
+    - 6.10.0
+    - 6.10.1
+    - 6.10.2
+    - 6.9.1
